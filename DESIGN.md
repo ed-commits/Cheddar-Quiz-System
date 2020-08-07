@@ -14,6 +14,7 @@ This is a system for creating and taking quizzes. It is intended to be used for 
 * (Quiz option) Only N random questions rather than all questions.
 * (Quiz option) Multiple choices are randomly ordered.
 * Questions can come in groups.
+* Multiple choice answers can be sourced from the question group.
 
 ## Quiz creation functionality
 
