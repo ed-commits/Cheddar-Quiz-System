@@ -13,6 +13,10 @@ This is a system for creating and taking quizzes. It is intended to be used for 
 * (Quiz option) Review right and wrong answers.
 * (Quiz option) Only N random questions rather than all questions.
 * (Quiz option) Multiple choices are randomly ordered.
+* (Quiz option) A sidebar that lets you flip between questions.
+* (Quiz option) A pass button to skip questions. Unanswered questions will be orange in review.
+* (Quiz option) A pass button to leave questions til the end.
+* (Quiz option) Timed quiz.
 * Questions can come in groups.
 * Multiple choice answers can be sourced from the question group.
 
