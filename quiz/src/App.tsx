@@ -4,8 +4,13 @@ import './App.css';
 import QuestionCard from './components/QuestionCard';
 import Question1 from './quizzes/Question1';
 import { shuffleArray } from './utils';
+import { QuestionObject, shuffleAnswers } from './QuestionObject';
+
+const q1 = shuffleAnswers(Question1);
 
 const App = () => {
+  const [question, setQuestion] = useState<QuestionObject>(q1);
+
   const startTrivia = async () => {
 
   }

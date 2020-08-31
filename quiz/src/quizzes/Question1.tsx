@@ -1,7 +1,9 @@
+import { QuestionObject } from '../QuestionObject';
 
-const Question1 = {
+const Question1 : QuestionObject = {
     question: "In which direction do veins carry deoxygenated blood?",
-    answers: ["Back towards the heart", "Away from the heart", "None, it stays still inside veins"]
+    correctAnswer: "Back towards the heart",
+    answers: ["Away from the heart", "None, it stays still inside veins"]
 }
 
 export default Question1;
