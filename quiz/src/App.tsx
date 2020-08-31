@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import QuestionCard from './components/QuestionCard';
 import Question1 from './quizzes/Question1';
+import { shuffleArray } from './utils';
 
 const App = () => {
   const startTrivia = async () => {
@@ -17,6 +18,8 @@ const App = () => {
 
   }
 
+  const shuffledAnswers = shuffleArray(Question1.answers);
+
   return (
     <div className="App">
       <h1>Quiz</h1>
@@ -26,7 +29,7 @@ const App = () => {
 
       <QuestionCard
         question={Question1.question}
-        answers={Question1.answers}
+        answers={shuffledAnswers}
         callback={checkAnswer}
         userAnswer={false} />
 
