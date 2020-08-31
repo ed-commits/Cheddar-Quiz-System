@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import QuestionCard from './components/QuestionCard';
+import Question1 from './quizzes/Question1';
 
-function App() {
+const App = () => {
+  const startTrivia = async () => {
+
+  }
+
+  const nextQuestion = async () => {
+
+  }
+
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Quiz</h1>
+
+      {//<button className="start" onClick={startTrivia}>Start</button>
+}
+
+      <QuestionCard
+        question={Question1.question}
+        answers={Question1.answers}
+        callback={checkAnswer}
+        userAnswer={false} />
+
+      <button className="next" onClick={nextQuestion}>Next</button>
     </div>
   );
 }

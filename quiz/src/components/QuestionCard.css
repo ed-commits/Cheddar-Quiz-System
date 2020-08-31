@@ -1,0 +1,4 @@
+.questioncard-answers {
+    display: flex;
+    flex-direction: column;
+}
