@@ -15,7 +15,7 @@ const QuestionCard: React.FC<Props> = ({
     userAnswer
 }) => (
         <div>
-            <p>{question}</p>
+            <p className="question">{question}</p>
             <div className="questioncard-answers">
                 {answers.map((answer, index) => (
                     <button key={index} disabled={userAnswer} onClick={callback} value={answer}>

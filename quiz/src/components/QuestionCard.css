@@ -1,4 +1,12 @@
 .questioncard-answers {
     display: flex;
     flex-direction: column;
+
+    padding: 15px;
+    background: rgba(163, 163, 175, 0.589);
+    border-radius: 10px;
+}
+
+.question {
+    font-size: 1.3em;
 }

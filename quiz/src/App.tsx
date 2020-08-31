@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import QuestionCard from './components/QuestionCard';
 import Question1 from './quizzes/Question1';
 import { shuffleArray } from './utils';
+
+// Types
 import { QuestionObject, shuffleAnswers } from './QuestionObject';
+
+// Styles
+//import logo from './logo.svg';
+import './App.css';
 
 const q1 = shuffleAnswers(Question1);
 
