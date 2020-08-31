@@ -10,6 +10,8 @@ const q1 = shuffleAnswers(Question1);
 
 const App = () => {
   const [question, setQuestion] = useState<QuestionObject>(q1);
+  const [score, setScore] = useState<number>(0);
+  const incScore = () => setScore(score + 1);
 
   const startTrivia = async () => {
 
@@ -23,6 +25,7 @@ const App = () => {
     if (e.currentTarget.value === question.correctAnswer) {
       // The correct answer was picked
       console.log("Yes");
+      incScore();
     }
     else {
       // The wrong answer was picked
@@ -35,6 +38,8 @@ const App = () => {
   return (
     <div className="App">
       <h1>Quiz</h1>
+
+      <p>Score: {score}</p>
 
       {//<button className="start" onClick={startTrivia}>Start</button>
       }
