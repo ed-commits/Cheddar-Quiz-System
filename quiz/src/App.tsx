@@ -20,7 +20,14 @@ const App = () => {
   }
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-
+    if (e.currentTarget.value === question.correctAnswer) {
+      // The correct answer was picked
+      console.log("Yes");
+    }
+    else {
+      // The wrong answer was picked
+      console.log("No");
+    }
   }
 
   const shuffledAnswers = shuffleArray(Question1.answers);
@@ -30,7 +37,7 @@ const App = () => {
       <h1>Quiz</h1>
 
       {//<button className="start" onClick={startTrivia}>Start</button>
-}
+      }
 
       <QuestionCard
         question={Question1.question}
