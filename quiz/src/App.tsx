@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import QuestionCard from './components/QuestionCard';
-import Question1 from './quizzes/Question1';
+import Questions from './quizzes/Question1';
 import { shuffleArray } from './utils';
 
 // Types
@@ -10,10 +10,12 @@ import { QuestionObject, shuffleAnswers } from './QuestionObject';
 //import logo from './logo.svg';
 import './App.css';
 
-const q1 = shuffleAnswers(Question1);
+const questionsList = Questions.map(question => shuffleAnswers(question));
 
 const App = () => {
-  const [question, setQuestion] = useState<QuestionObject>(q1);
+  const [questionNumber, setQuestionNumber] = useState<number>(0);
+  const question = () => questionsList[questionNumber];
+  const incQuestion = () => setQuestionNumber(questionNumber + 1); // TODO: handle last question
   const [score, setScore] = useState<number>(0);
   const incScore = () => setScore(score + 1);
 
@@ -22,11 +24,11 @@ const App = () => {
   }
 
   const nextQuestion = async () => {
-
+    incQuestion()
   }
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (e.currentTarget.value === question.correctAnswer) {
+    if (e.currentTarget.value === question().correctAnswer) {
       // The correct answer was picked
       console.log("Yes");
       incScore();
@@ -36,8 +38,6 @@ const App = () => {
       console.log("No");
     }
   }
-
-  const shuffledAnswers = shuffleArray(Question1.answers);
 
   return (
     <div className="App">
@@ -49,8 +49,8 @@ const App = () => {
       }
 
       <QuestionCard
-        question={Question1.question}
-        answers={shuffledAnswers}
+        question={question().question}
+        answers={question().answers}
         callback={checkAnswer}
         userAnswer={false} />
 
