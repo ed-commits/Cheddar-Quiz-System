@@ -19,6 +19,7 @@ This is a system for creating and taking quizzes. It is intended to be used for 
 * (Quiz option) Timed quiz.
 * Questions can come in groups.
 * Multiple choice answers can be sourced from the question group.
+* Hints - click to get a hint, hint shown on wrong answer.
 
 ## Quiz creation functionality
 
